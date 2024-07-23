@@ -2,15 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My RPG Dice Roller</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>Welcome to RPG Dice Roller</h1>
     <h2> May you always roll with advantage!</h2>
+    <div class="container">
+        <div class="title"> RPG Dice Roller </div>
+        <div class="dice-options">
+            <span> Click on the die you wish to roll...</span>  
+            <br>
+            <!-- add dice images below-->
+            <img src="./assets/images/d2-coin.png" alt="d2" class="die" id="d2" width="128" height="128">
+            <img src="./assets/images/d4.png" alt="d4" class="die" id="d4" width="128" height="128">
+            <img src="./assets/images/d6.png" alt="d6" class="die" id="d6" width="128" height="128">
+            <img src="./assets/images/d8.png" alt="d8" class="die" id="d8" width="128" height="128">
+            <img src="./assets/images/d10.png" alt="d10" class="die" id="d10" width="128" height="128">
+            <img src="./assets/images/D12.png" alt="d12" class="die" id="d12" width="128" height="128">
+            <img src="./assets/images/d20.png" alt="d20" class="die" id="d20" width="128" height="128">
+        </div>
+        <div class="dice-pool">
+            <span> Your Dice Pool: </span>
+            <div id="dice-pool"></div>
+            
+            <div class="results">
+                Your Results: <span id="results"></span>
+            </div>
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+            
+
+
+
+        </div>
+
+            
+    </div> 
     
-    <!-- Your content goes here -->
     
     <script src="./assets/roller.js"></script>
 </body>
