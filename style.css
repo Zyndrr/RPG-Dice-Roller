@@ -1,1 +1,69 @@
-/*testing push*/
+body {
+    background-color: #F7F2E0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+text-align: center;
+display: flex;
+margin: 0;
+}
+
+.container {
+    background-color: #FFFFFF;
+    border: 10px solid #8B5A2B;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.title {
+    background-color: #8B5A2B;
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.dice {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.dice div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+}
+
+.dice-pool {
+    background-color: #8B5A2B;
+    color: white;
+    padding: 10px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.results {
+    border: 2px solid #8B5A2B;
+    padding: 10px;
+    min-height: 100px;
+}
+
+footer {
+    font-size: 0.8em;
+    color: #8B5A2B;
+}
