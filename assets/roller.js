@@ -2,7 +2,7 @@
 
 //Replace the "myModal" with the Modal's ID.
 var singleResult = 0;
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("DiceModal");
 var d2btn = document.getElementById("d2btn");
 var d4btn = document.getElementById("d4btn");
 var d6btn = document.getElementById("d6btn");
@@ -16,9 +16,9 @@ var diePrintRes = document.getElementById("results");
 var span = document.getElementsByClassName("close")[0];
 
 //when user clicks on x it closes the modal
-//span.onclick = function() {
-//    modal.style.display = "none";
-//}
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
 //When user clicks outside the modal it closes the modal (this was commented out as it was preventing the modal from opening)
 //window.onclick = function(){
@@ -55,63 +55,60 @@ d2btn.onclick = function() {
     let result = dieRoll(2);
     console.log(result);
     //Call here the function printing the result to a modal,
-    diePrintRes.innerText = result;
-    //Set the modal display to "block" to allow it to show up
-    modal.style.display = "block";
+    diePrintRes.innerText = "two-sided die rolled: " + result;
+    //Set the modal display to "inline" to allow it to show up
+    modal.style.display = "inline";
 }
 
 d4btn.onclick = function() {
     let result = dieRoll(4);
     console.log(result);
     //Call here the function printing the result to a modal,
-    diePrintRes.innerText = result;
-    //Set the modal display to "block" to allow it to show up
-    modal.style.display = "block";
+    diePrintRes.innerText ="four-sided die rolled: " +  result;
+    modal.style.display = "inline";
 }
 
 d6btn.onclick = function() {
     let result = dieRoll(6);
     console.log(result);
     //Call here the function printing the result to a modal,
-    diePrintRes.innerText = result;
-    //Set the modal display to "block" to allow it to show up
-    modal.style.display = "block";
+    diePrintRes.innerText = "six-sided die rolled: " + result;
+    //Set the modal display to "inline" to allow it to show up
+    modal.style.display = "inline";
 }
 
 d8btn.onclick = function() {
     let result = dieRoll(8);
     console.log(result);
     //Call here the function printing the result to a modal,
-    diePrintRes.innerText = result;
-    //Set the modal display to "block" to allow it to show up
-    modal.style.display = "block";
+    diePrintRes.innerText = "eight-sided die rolled: " + result;
+    modal.style.display = "inline";
 }
 
 d10btn.onclick = function() {
     let result = dieRoll(10);
     console.log(result);
     //Call here the function printing the result to a modal,
-    diePrintRes.innerText = result;
-    //Set the modal display to "block" to allow it to show up
-    modal.style.display = "block";
+    diePrintRes.innerText = "ten-sided die rolled: " + result;
+    modal.style.display = "inline";
 }
 
 d12btn.onclick = function() {
     let result = dieRoll(12);
     console.log(result);
     //Call here the function printing the result to a modal,
-    diePrintRes.innerText = result;
-    //Set the modal display to "block" to allow it to show up
-    modal.style.display = "block";
+    diePrintRes.innerText = "twelve-sided die rolled: " + result;
+    //Set the modal display to "inline" to allow it to show up
+    modal.style.display = "inline";
 }
 
 d20btn.onclick = function() {
     let result = dieRoll(20);
     console.log(result);
     //Call here the function printing the result to a modal,
-    diePrintRes.innerText = result;
-    //Set the modal display to "block" to allow it to show up
-    modal.style.display = "block";
+    diePrintRes.innerText = "twenty-sided die rolled: " + result;
+    //Set the modal display to "inline" to allow it to show up
+    modal.style.display = "inline";
 }
 
 clearButton.onclick = function() {

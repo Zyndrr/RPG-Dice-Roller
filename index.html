@@ -23,15 +23,20 @@
             <button type="button" id="d10btn"><img src="./assets/images/d10.png" alt="d10" class="die" id="d10" width="128" height="128"></button>
             <button type="button" id="d12btn"><img src="./assets/images/D12.png" alt="d12" class="die" id="d12" width="128" height="128"></button>
             <button type="button" id="d20btn"><img src="./assets/images/d20.png" alt="d20" class="die" id="d20" width="128" height="128"></button>
-        </div>
-        <div class="dice-pool">
-            <span> Your Dice Pool: </span>
-            <div id="dice-pool"></div>
-            
-            <div class="results">
-                Your Results: <span id="results"></span>
+        </div> 
+        <div id="DiceModal" class="modal">
 
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="results">Some text in the Modal..</p>
             </div>
+          
+          </div>
+        <div class="dice-pool">
+            <!-- <span> Your Dice Pool: </span>
+            <div id="dice-pool"></div> -->
+            
             <div>
                 <h4>Roll History</h4>
                 <button type="button" id="clear-history">Clear History</button>
