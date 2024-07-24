@@ -11,7 +11,7 @@ First choose the die you want to roll and click on it to reveal the outcome of y
 If you want to roll multiple dice click on "Open Dice Table" then click on the number of dice you want to add to the table. Once you have the number you desire click "Roll" to reveal the outocome of the roll.
 Your most recent dice roll will be added to the bottom of the page for you to reference. Have fun!
 
-##Technologies
+## Technologies
 
 This project uses:
   -Bootstrap Framework
