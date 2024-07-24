@@ -5,7 +5,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
 }
 
@@ -60,7 +59,7 @@ margin: 0;
 .results {
     border: 2px solid #8B5A2B;
     padding: 10px;
-    min-height: 100px;
+    min-height: 25px;
 }
 
 footer {

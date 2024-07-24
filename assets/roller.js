@@ -10,6 +10,7 @@ var d8btn = document.getElementById("d8btn");
 var d10btn = document.getElementById("d10btn");
 var d12btn = document.getElementById("d12btn");
 var d20btn = document.getElementById("d20btn");
+var clearButton = document.getElementById("clear-history");
 //diePrintsRes needs to access the modal's p tag when created.
 var diePrintRes = document.getElementById("results");
 var span = document.getElementsByClassName("close")[0];
@@ -29,9 +30,26 @@ function dieRoll(numSides) {
     //let numDie = Number(numSides);
     let min = 1;
     let result = Math.floor(Math.random() * numSides + 1);
+    addResultToStorage(result, numSides);
+    printResults();
     return result;
 }
+function addResultToStorage(result, numSides) {
+    let diceRollResults = JSON.parse(localStorage.getItem("diceRollResults")) || [];
+    diceRollResults.push({result, numSides});
+    localStorage.setItem("diceRollResults", JSON.stringify(diceRollResults));   
 
+}
+function printResults() {
+    let diceRollResults = JSON.parse(localStorage.getItem("diceRollResults")) || [];
+    let results = document.getElementById("roll-history");
+    results.innerHTML = "";
+    diceRollResults.reverse().forEach(function(diceRollResult) {
+        results.innerHTML += `<p>${diceRollResult.numSides} sided die rolled a ${diceRollResult.result}</p>`;
+    });
+
+    
+}
 //Button function for the die buttons. When the corresponding die button is pressed, the die is rolled and the result is presented to the user via a modal popup and added to the history through local storage.
 d2btn.onclick = function() {
     let result = dieRoll(2);
@@ -95,3 +113,9 @@ d20btn.onclick = function() {
     //Set the modal display to "block" to allow it to show up
     modal.style.display = "block";
 }
+
+clearButton.onclick = function() {
+    localStorage.removeItem("diceRollResults");
+    printResults();
+}
+printResults();
