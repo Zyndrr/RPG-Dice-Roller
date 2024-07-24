@@ -20,11 +20,6 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
-//When user clicks outside the modal it closes the modal (this was commented out as it was preventing the modal from opening)
-//window.onclick = function(){
-//    modal.style.display = "none";
-//}
-
 //Creating a function that will be passed a number of sides for the dice to be rolled and will return the randomized value
 function dieRoll(numSides) {
     //let numDie = Number(numSides);
@@ -109,6 +104,13 @@ d20btn.onclick = function() {
     diePrintRes.innerText = "twenty-sided die rolled: " + result;
     //Set the modal display to "inline" to allow it to show up
     modal.style.display = "inline";
+}
+
+//When user clicks outside the modal it closes the modal
+window.onclick = function(event){
+    if (event.target == modal){
+        modal.style.display = "none";
+    }
 }
 
 clearButton.onclick = function() {
